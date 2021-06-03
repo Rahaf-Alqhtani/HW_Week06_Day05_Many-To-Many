@@ -1,0 +1,31 @@
+﻿@{
+    var Branches = (List<BranchModel>)ViewData["Branches"];
+    string searchId = (string)ViewBag.address;
+    string searchId = (string)ViewBag.address;
+
+}
+<h1>@searchId search ID</h1>
+<h1> @searchId2</h1>
+<h1>This Branch Index</h1>
+<h1>This is index Branches !! </h1>
+<table border="1">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Address</td>
+            <td>Name</td>
+            <td>Area</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var b in Branches)
+        {
+            <tr>
+                <td>@b.ID</td>
+                <td>@b.Name</td>
+                <td>@b.Address</td>
+                <td>@b.Area</td>
+            </tr>
+        }
+    </tbody>
+</table>
